@@ -1,4 +1,6 @@
 *.pt
+*.7z
+*.zip
 
 __pycache__
 
