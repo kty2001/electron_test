@@ -1,5 +1,39 @@
 {
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "frontend/main.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
   "devDependencies": {
-    "electron-packager": "^17.1.2"
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.example.frontend",
+    "productName": "FrontendApp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "frontend/**/*",
+      "backend/**/*",
+      "yolo11n-cls.pt",
+      "!dist/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "sign": false,
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }

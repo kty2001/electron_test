@@ -3,6 +3,7 @@
 *.zip
 
 __pycache__
+node_modules
 
 frontend/node_modules
 frontend/MyApp-win32-x64
